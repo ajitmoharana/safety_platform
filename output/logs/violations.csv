@@ -1,0 +1,17 @@
+event_id,timestamp,video_time,worker_id,violation_type,helmet,vest,gloves,ppe_status,restricted_zone,confidence,snapshot_path,source
+00001,2026-09-19 06:01:19,00:00:01,12,RESTRICTED_ZONE_ENTRY,NO,NO,NO,UNSAFE,YES,0.765,output\snapshots\worker_12_restricted_zone_entry_2026-09-19_06-01-19.jpg,E:\workplace_safety_ai\videos\input.mp4
+00002,2026-09-19 06:01:21,00:00:01,3,RESTRICTED_ZONE_ENTRY,NO,NO,NO,UNSAFE,YES,0.698,output\snapshots\worker_3_restricted_zone_entry_2026-09-19_06-01-21.jpg,E:\workplace_safety_ai\videos\input.mp4
+00003,2026-09-19 06:01:27,00:00:02,3,RESTRICTED_ZONE_ENTRY,NO,NO,NO,UNSAFE,YES,0.835,output\snapshots\worker_3_restricted_zone_entry_2026-09-19_06-01-27.jpg,E:\workplace_safety_ai\videos\input.mp4
+00004,2026-09-19 06:01:29,00:00:02,6,RESTRICTED_ZONE_ENTRY,NO,NO,NO,UNSAFE,YES,0.777,output\snapshots\worker_6_restricted_zone_entry_2026-09-19_06-01-29.jpg,E:\workplace_safety_ai\videos\input.mp4
+00005,2026-09-19 14:42:29,00:00:01,12,RESTRICTED_ZONE_ENTRY,NO,NO,NO,UNSAFE,YES,0.765,output\snapshots\worker_12_restricted_zone_entry_2026-09-19_14-42-29.jpg,E:\workplace_safety_ai\videos\input.mp4
+00006,2026-09-19 14:42:32,00:00:01,3,RESTRICTED_ZONE_ENTRY,NO,NO,NO,UNSAFE,YES,0.698,output\snapshots\worker_3_restricted_zone_entry_2026-09-19_14-42-32.jpg,E:\workplace_safety_ai\videos\input.mp4
+00007,2026-09-19 14:42:40,00:00:02,3,RESTRICTED_ZONE_ENTRY,NO,NO,NO,UNSAFE,YES,0.835,output\snapshots\worker_3_restricted_zone_entry_2026-09-19_14-42-40.jpg,E:\workplace_safety_ai\videos\input.mp4
+00008,2026-09-19 14:42:44,00:00:02,6,RESTRICTED_ZONE_ENTRY,NO,NO,NO,UNSAFE,YES,0.777,output\snapshots\worker_6_restricted_zone_entry_2026-09-19_14-42-44.jpg,E:\workplace_safety_ai\videos\input.mp4
+00009,2026-09-19 14:56:12,00:00:01,12,RESTRICTED_ZONE_ENTRY,NO,NO,NO,UNSAFE,YES,0.765,output\snapshots\worker_12_restricted_zone_entry_2026-09-19_14-56-12.jpg,E:\workplace_safety_ai\videos\input.mp4
+00010,2026-09-19 14:56:15,00:00:01,3,RESTRICTED_ZONE_ENTRY,NO,NO,NO,UNSAFE,YES,0.698,output\snapshots\worker_3_restricted_zone_entry_2026-09-19_14-56-15.jpg,E:\workplace_safety_ai\videos\input.mp4
+00011,2026-09-19 14:56:22,00:00:02,3,RESTRICTED_ZONE_ENTRY,NO,NO,NO,UNSAFE,YES,0.835,output\snapshots\worker_3_restricted_zone_entry_2026-09-19_14-56-22.jpg,E:\workplace_safety_ai\videos\input.mp4
+00012,2026-09-19 14:56:26,00:00:02,6,RESTRICTED_ZONE_ENTRY,NO,NO,NO,UNSAFE,YES,0.777,output\snapshots\worker_6_restricted_zone_entry_2026-09-19_14-56-26.jpg,E:\workplace_safety_ai\videos\input.mp4
+00013,2026-09-21 11:52:26,00:00:01,12,RESTRICTED_ZONE_ENTRY,NO,NO,NO,UNSAFE,YES,0.765,output\snapshots\worker_12_restricted_zone_entry_2026-09-21_11-52-26.jpg,E:\workplace_safety_ai\videos\input.mp4
+00014,2026-09-21 11:52:29,00:00:01,3,RESTRICTED_ZONE_ENTRY,NO,NO,NO,UNSAFE,YES,0.698,output\snapshots\worker_3_restricted_zone_entry_2026-09-21_11-52-30.jpg,E:\workplace_safety_ai\videos\input.mp4
+00015,2026-09-21 11:52:36,00:00:02,3,RESTRICTED_ZONE_ENTRY,NO,NO,NO,UNSAFE,YES,0.835,output\snapshots\worker_3_restricted_zone_entry_2026-09-21_11-52-36.jpg,E:\workplace_safety_ai\videos\input.mp4
+00016,2026-09-21 11:52:39,00:00:02,6,RESTRICTED_ZONE_ENTRY,NO,NO,NO,UNSAFE,YES,0.777,output\snapshots\worker_6_restricted_zone_entry_2026-09-21_11-52-39.jpg,E:\workplace_safety_ai\videos\input.mp4

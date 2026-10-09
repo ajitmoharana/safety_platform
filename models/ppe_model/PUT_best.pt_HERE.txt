@@ -1,0 +1,4 @@
+Place your trained YOLOv8 PPE model here as best.pt
+It must detect: helmet, vest, gloves (class names can differ - map them in
+config.yaml -> ppe.class_aliases).
+The default COCO yolov8n.pt CANNOT detect PPE.

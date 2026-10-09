@@ -1,0 +1,67 @@
+{
+  "source": "E:\\workplace_safety_ai\\videos\\input.mp4",
+  "generated_at": "2026-09-21 11:54:01",
+  "total_events": 4,
+  "events": [
+    {
+      "event_id": "00013",
+      "timestamp": "2026-09-21 11:52:26",
+      "video_time": "00:00:01",
+      "worker_id": 12,
+      "violation_type": "RESTRICTED_ZONE_ENTRY",
+      "helmet": "NO",
+      "vest": "NO",
+      "gloves": "NO",
+      "ppe_status": "UNSAFE",
+      "restricted_zone": "YES",
+      "confidence": 0.765,
+      "snapshot_path": "output\\snapshots\\worker_12_restricted_zone_entry_2026-09-21_11-52-26.jpg",
+      "source": "E:\\workplace_safety_ai\\videos\\input.mp4"
+    },
+    {
+      "event_id": "00014",
+      "timestamp": "2026-09-21 11:52:29",
+      "video_time": "00:00:01",
+      "worker_id": 3,
+      "violation_type": "RESTRICTED_ZONE_ENTRY",
+      "helmet": "NO",
+      "vest": "NO",
+      "gloves": "NO",
+      "ppe_status": "UNSAFE",
+      "restricted_zone": "YES",
+      "confidence": 0.698,
+      "snapshot_path": "output\\snapshots\\worker_3_restricted_zone_entry_2026-09-21_11-52-30.jpg",
+      "source": "E:\\workplace_safety_ai\\videos\\input.mp4"
+    },
+    {
+      "event_id": "00015",
+      "timestamp": "2026-09-21 11:52:36",
+      "video_time": "00:00:02",
+      "worker_id": 3,
+      "violation_type": "RESTRICTED_ZONE_ENTRY",
+      "helmet": "NO",
+      "vest": "NO",
+      "gloves": "NO",
+      "ppe_status": "UNSAFE",
+      "restricted_zone": "YES",
+      "confidence": 0.835,
+      "snapshot_path": "output\\snapshots\\worker_3_restricted_zone_entry_2026-09-21_11-52-36.jpg",
+      "source": "E:\\workplace_safety_ai\\videos\\input.mp4"
+    },
+    {
+      "event_id": "00016",
+      "timestamp": "2026-09-21 11:52:39",
+      "video_time": "00:00:02",
+      "worker_id": 6,
+      "violation_type": "RESTRICTED_ZONE_ENTRY",
+      "helmet": "NO",
+      "vest": "NO",
+      "gloves": "NO",
+      "ppe_status": "UNSAFE",
+      "restricted_zone": "YES",
+      "confidence": 0.777,
+      "snapshot_path": "output\\snapshots\\worker_6_restricted_zone_entry_2026-09-21_11-52-39.jpg",
+      "source": "E:\\workplace_safety_ai\\videos\\input.mp4"
+    }
+  ]
+}

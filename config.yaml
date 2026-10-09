@@ -1,0 +1,110 @@
+# ===========================================================
+# AI-Based Workplace Safety Monitoring & Violation Management
+# Central configuration file
+# ===========================================================
+
+models:
+  # Person detector: plain COCO YOLOv8 is fine (class 0 = person).
+  # yolov8n.pt is downloaded automatically by ultralytics on first run.
+  person_model: yolov8n.pt
+  # PPE detector: MUST be your own trained YOLOv8 model.
+  # COCO models CANNOT detect helmet / vest / gloves.
+  ppe_model: models/ppe_model/best.pt
+
+detection:
+  person_confidence: 0.45
+  ppe_confidence: 0.35
+  iou_threshold: 0.45
+  # Optional inference size (pixels). null = use model default (640)
+  imgsz: 640
+
+tracking:
+  max_age: 30            # frames a track survives without detection
+  n_init: 3              # detections needed before a track is confirmed
+  max_iou_distance: 0.7
+  max_cosine_distance: 0.3
+  embedder: mobilenet    # deep-sort-realtime appearance embedder
+  half: false            # fp16 embedder (only useful on CUDA)
+
+ppe:
+  # PPE items every worker must wear
+  required:
+    - helmet
+    - vest
+    - gloves
+  # Map messy dataset class names -> canonical items.
+  # Comparison is lowercase and ignores spaces / dashes / underscores.
+  class_aliases:
+    helmet: [helmet, hardhat, hard hat, safety helmet, head, helmets]
+    vest: [vest, safety vest, reflective vest, hi vis, hivis, jacket, safety jacket]
+    gloves: [glove, gloves, safety gloves, hand gloves]
+  # Classes that some PPE datasets ship which must be ignored
+  # (e.g. NO-Hardhat, Person, Machinery ...)
+  ignore_classes: [person, no helmet, no hardhat, no vest, no safety vest, no gloves,
+                   no mask, mask, machinery, vehicle, cone, safety cone]
+
+matching:
+  # PPE box must overlap the worker box by at least this fraction
+  # (intersection area / PPE box area) to be considered "worn" by them.
+  min_containment: 0.55
+  # Vertical band of the person box (0 = top, 1 = bottom) where each item
+  # is normally expected. Used to score/disambiguate candidates.
+  regions:
+    helmet: [0.00, 0.40]
+    vest: [0.15, 0.75]
+    gloves: [0.25, 0.95]
+  # Penalty applied when the PPE sits outside its expected band instead of
+  # rejecting it outright (keeps the system robust to odd camera angles).
+  out_of_region_penalty: 0.35
+
+compliance:
+  smoothing_frames: 15     # temporal history length per worker
+  presence_ratio: 0.35     # item counts as "worn" if seen in >= 35% of history
+  min_history: 5           # frames before smoothing is trusted
+  # UNSAFE when this many required items (or more) are missing
+  unsafe_if_missing_at_least: 2
+
+violations:
+  cooldown_seconds: 8      # do not re-log the same violation for the same worker
+  min_violation_frames: 5  # violation must persist this many frames before logging
+  save_snapshot: true
+  # Which violation types are active
+  types:
+    missing_helmet: true
+    missing_vest: true
+    missing_gloves: true
+    ppe_partial: true
+    ppe_unsafe: true
+    restricted_zone_entry: true
+
+restricted_zone:
+  enabled: true
+  interactive_selection: true    # draw zones with the mouse on the first frame
+  zone_file: data/zones.json     # zones are saved/loaded here
+  load_saved_zones: true
+  # Fallback polygons in pixel coordinates (used when interactive selection is
+  # disabled or skipped). Each zone is a list of [x, y] points.
+  polygons: []
+  # Reference point of the worker: bottom_center | center
+  reference_point: bottom_center
+
+output:
+  save_video: true
+  save_logs: true
+  save_snapshots: true
+  processed_dir: output/processed
+  snapshots_dir: output/snapshots
+  logs_dir: output/logs
+  log_file: output/logs/violations.csv
+  append_logs: true              # false = start a fresh CSV on every run
+  output_video_name: result.mp4
+
+display:
+  show_window: true
+  show_ppe_boxes: true
+  window_name: "Workplace Safety Monitor"
+  # Downscale long side before inference/display (null = keep original size)
+  resize_width: 1280
+
+device:
+  use_cuda_if_available: true
