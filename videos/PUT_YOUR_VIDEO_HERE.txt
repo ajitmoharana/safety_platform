@@ -1,2 +1,3 @@
 Place your test footage here as input.mp4 (or pass --source path\to\video.mp4).
 Supported: .mp4 .avi .mov .mkv
+only video will sore here
