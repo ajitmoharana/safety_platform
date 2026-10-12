@@ -328,6 +328,3 @@ selection. The app merges your file on top of built-in defaults, so a missing
 or partially filled `config.yaml` never crashes the run.
 
 ---
-
-*Built for a hackathon demonstration: DETECTION → TRACKING → ANALYSIS →
-VIOLATION → EVIDENCE.*
